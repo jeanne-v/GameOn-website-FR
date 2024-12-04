@@ -10,6 +10,7 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const closeModalBtn = document.getElementById("close-modal-btn");
 const formData = document.querySelectorAll(".formData");
 
 // launch modal event
@@ -20,4 +21,7 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
-
+// close modal form
+closeModalBtn.addEventListener("click", () => {
+  modalbg.style.display = "none";
+});
