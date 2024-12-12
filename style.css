@@ -209,7 +209,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
-.formData[data-error]::after {
+/* .formData[data-error]::after {
   content: attr(data-error);
   font-size: 0.4em;
   color: #e54858;
@@ -227,12 +227,27 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
+
 input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: red;
 } */
+
+.formData.error .text-control {
+  border: 2px solid #e54858;
+}
+
+.formData .error-message {
+  display: none;
+}
+
+.formData.error .error-message {
+  display: block;
+  font-size: 0.4em;
+  color: red;
+}
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
