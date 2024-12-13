@@ -10,7 +10,6 @@ function editNav() {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const closeModalBtn = document.getElementById("close-modal-btn");
 const modalForm = document.getElementById("modal-form");
 const formData = document.querySelectorAll(".formData");
 const inputs = Array.from(
@@ -26,8 +25,14 @@ function launchModal() {
 }
 
 // close modal form
-closeModalBtn.addEventListener("click", () => {
-  modalbg.style.display = "none";
+
+document.addEventListener("click", (e) => {
+  if (
+    e.target.id === "close-modal-btn" ||
+    e.target.id === "modal-confirmation-close-btn"
+  ) {
+    modalbg.style.display = "none";
+  }
 });
 
 // modal form submit event
@@ -89,5 +94,5 @@ function showModalFormConfirmation() {
   document.querySelector(
     ".modal-body"
   ).innerHTML = `<div class='modal-confirmation'><p>Merci pour 
-votre inscription</p><button class="btn-close">Fermer</button></div>`;
+<span>votre inscription</span></p><button class="btn-close" id="modal-confirmation-close-btn">Fermer</button></div>`;
 }

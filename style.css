@@ -171,7 +171,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 5vh auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -350,6 +350,26 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+.modal-confirmation {
+  height: calc(90vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.modal-confirmation p,
+.modal-confirmation button {
+  margin-top: auto;
+}
+
+.modal-confirmation span {
+  display: block;
+}
+
 /* custom select styles */
 .custom-select {
   position: relative;
