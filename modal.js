@@ -34,11 +34,18 @@ closeModalBtn.addEventListener("click", () => {
 modalForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  let isFormValid = true;
+
   inputs.forEach((input) => {
     if (validateInput(input) === false) {
+      isFormValid = false;
       input.parentElement.classList.add("error");
     }
   });
+
+  if (isFormValid) {
+    showModalFormConfirmation();
+  }
 });
 
 function validateInput(input) {
@@ -77,3 +84,10 @@ inputs.forEach((input) => {
     }
   });
 });
+
+function showModalFormConfirmation() {
+  document.querySelector(
+    ".modal-body"
+  ).innerHTML = `<div class='modal-confirmation'><p>Merci pour 
+votre inscription</p><button class="btn-close">Fermer</button></div>`;
+}
