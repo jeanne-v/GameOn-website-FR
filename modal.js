@@ -41,6 +41,7 @@ modalForm.addEventListener("submit", (e) => {
 
   let isFormValid = true;
 
+  // check each form input
   inputs.forEach((input) => {
     if (validateInput(input) === false) {
       isFormValid = false;
@@ -79,6 +80,7 @@ function validateInput(input) {
   return true;
 }
 
+// remove error style if input is corrected
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
     if (
@@ -90,6 +92,7 @@ inputs.forEach((input) => {
   });
 });
 
+// show confirmation message
 function showModalFormConfirmation() {
   document.querySelector(
     ".modal-body"
