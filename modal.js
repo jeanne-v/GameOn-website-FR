@@ -11,10 +11,7 @@ function launchModal() {
 
 // close modal
 document.addEventListener("click", (e) => {
-  if (
-    e.target.id === "close-modal-btn" ||
-    e.target.id === "modal-confirmation-close-btn"
-  ) {
+  if (e.target.id === "close-modal-btn") {
     modalbg.style.display = "none";
   }
 });
