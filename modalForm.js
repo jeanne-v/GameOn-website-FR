@@ -29,7 +29,7 @@ function checkModalInputError(input) {
     return "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
   } else if (input.name === "last-name" && !checkIfTextInputValueIsMinLength(input, 2)) {
     return "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
-  } else if (input.type === "email" && !checkEmailInputValidity(input)) {
+  } else if (input.type === "email" && !checkIfInputValueIsAValidEmail(input)) {
     return "Vous devez entrer une adresse email valide";
   } else if (input.name === "birthdate" && !checkIfInputValueIsNotEmpty(input)) {
     return "Vous devez entrer votre date de naissance.";

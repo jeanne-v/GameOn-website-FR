@@ -126,7 +126,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    /* margin-top: -15px; */
   }
 }
 
@@ -306,10 +305,6 @@ footer {
 }
 
 /* Modal form */
-
-.smFont {
-  font-size: 16px;
-}
 
 .bground {
   display: none;

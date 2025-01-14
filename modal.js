@@ -1,5 +1,6 @@
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
+const closeModalBtn = document.getElementById("close-modal-btn");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -10,8 +11,6 @@ function launchModal() {
 }
 
 // close modal
-document.addEventListener("click", (e) => {
-  if (e.target.id === "close-modal-btn") {
-    modalbg.style.display = "none";
-  }
+closeModalBtn.addEventListener("click", () => {
+  modalbg.style.display = "none";
 });
