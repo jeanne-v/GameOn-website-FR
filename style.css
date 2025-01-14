@@ -118,20 +118,24 @@ img {
   }
 }
 
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
+@media screen and (max-width: 800px) and (min-width: 415px) {
+  .topnav {
+    margin: 30px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 414px) {
   .topnav {
-    margin: 30px;
+    margin: 18px;
+  }
+
+  .topnav .icon {
+    margin: 0;
+  }
+
+  .header-logo img {
+    height: 19px;
+    margin: 12px 0 10px 12px;
   }
 }
 
