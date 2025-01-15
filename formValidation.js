@@ -8,7 +8,7 @@ function checkIfTextInputValueIsMinLength(input, minLength) {
 
 // check if input value is a valid email address
 function checkIfInputValueIsAValidEmail(input) {
-  const regexp = /^[a-z0-9.-_]+@[a-z0-9-]+\.[a-z]{2,}$/;
+  const regexp = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
   if (!regexp.test(input.value)) {
     return false;
   }
