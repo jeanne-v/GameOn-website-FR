@@ -60,5 +60,5 @@ function showModalFormConfirmation() {
   document.querySelector(
     ".modal-body"
   ).innerHTML = `<div class='modal-confirmation'><p>Merci pour 
-  <span>votre inscription</span></p><button class="btn-close" id="close-modal-btn">Fermer</button></div>`;
+  <span>votre inscription</span></p><button class="btn-close" id="modal-confirmation-close-btn">Fermer</button></div>`;
 }
